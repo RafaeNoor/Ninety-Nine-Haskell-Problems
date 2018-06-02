@@ -176,5 +176,22 @@ removeAt n (x:xs) = (Just (head b2), b1 ++ tail b2)
                     (b1,b2) = split (x:xs) (n-1)
 
 
+-- Problem 21
+
+insertAt :: a -> [a] -> Int -> [a]
+insertAt _ [] _ = []
+insertAt x xs n = l1 ++ [x] ++ l2
+                where
+                  (l1,l2) = split' xs  $n-1
+
+
+-- Problem 22
+
+range:: Int -> Int -> [Int]
+range i j | i <= j = i: range (i+1) j
+          | otherwise = []
+
+-- Problem 23
+
 
 
